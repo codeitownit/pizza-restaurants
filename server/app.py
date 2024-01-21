@@ -73,6 +73,20 @@ class OneRestaurant(Resource):
             return {
                 "error": "Restaurant not found"
             }, 404 
+    
+    def delete(id):
+        restaurant = Restaurant.query.get(id)
+
+        if not restaurant:
+            return make_response(jsonify({"error": "Restaurant not found"}), 200)
+        
+        db.session.delete(restaurant)
+        db.session.commit()
+
+        return '', 204
+        
+        
+
          
 api.add_resource(OneRestaurant, '/restaurants/<int:id>')
 
