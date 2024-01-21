@@ -84,9 +84,6 @@ class OneRestaurant(Resource):
         db.session.commit()
 
         return '', 204
-        
-        
-
          
 api.add_resource(OneRestaurant, '/restaurants/<int:id>')
 
@@ -123,7 +120,11 @@ class RestaurantPizzas(Resource):
         db.session.add(new_restaurant_pizza)
         db.session.commit()
 
-        pizza_data = Pizza().get(pizza.id)
+        pizza_data = {
+            "id": pizza.id,
+            "name": pizza.name,
+            "ingredients": pizza.ingredients
+        }
 
         return pizza_data, 201
     
