@@ -1,8 +1,8 @@
-"""create tables pizzas, restaurants, restaurant_pizzas
+"""Create restaurants, pizzas, restaurant_pizzas models
 
-Revision ID: 9998a15748ee
+Revision ID: 7446d21eebdc
 Revises: 
-Create Date: 2024-01-21 12:01:11.003028
+Create Date: 2024-01-21 19:20:18.282671
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = '9998a15748ee'
+revision = '7446d21eebdc'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -36,7 +36,7 @@ def upgrade():
     )
     op.create_table('restaurant_pizzas',
     sa.Column('id', sa.Integer(), nullable=False),
-    sa.Column('price', sa.String(length=255), nullable=False),
+    sa.Column('price', sa.Integer(), nullable=False),
     sa.Column('created_at', sa.DateTime(), server_default=sa.text('(CURRENT_TIMESTAMP)'), nullable=True),
     sa.Column('updated_at', sa.DateTime(), nullable=True),
     sa.Column('pizza_id', sa.Integer(), nullable=False),
