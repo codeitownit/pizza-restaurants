@@ -3,10 +3,14 @@ body {
   font-size: 16px;
   color: #3e3e3e;
   margin: 0;
+  
 }
 
 header {
-  background-color: #cc4224;
+  background-color: #0bb7ab;
+  padding: 12px 12px;
+  
+  
 }
 
 main {
@@ -19,6 +23,8 @@ header h1 {
   padding: 12px 0;
   text-transform: uppercase;
   letter-spacing: 5px;
+  margin-top: 0px;
+  
 }
 
 header a {
@@ -27,7 +33,7 @@ header a {
 
 h2 {
   font-family: "Baloo Chettan 2", cursive;
-  color: #2a75b3;
+  
   text-transform: uppercase;
   font-size: 32px;
 }
@@ -39,11 +45,10 @@ ul {
 
 li {
   padding: 12px;
+  background-color: #fcffb1;
 }
 
-li:nth-of-type(2n) {
-  background-color: #80b5e1;
-}
+
 
 li a {
   font-weight: bold;
@@ -51,9 +56,6 @@ li a {
   margin-right: 16px;
 }
 
-li:nth-of-type(2n) a {
-  color: #fff;
-}
 
 select,
 input,

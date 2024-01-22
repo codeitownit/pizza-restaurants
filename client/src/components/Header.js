@@ -4,7 +4,7 @@ function Header() {
   return (
     <header>
       <h1>
-        <Link to="/">Resturant Pizzas</Link>
+        <Link to="/">Restaurant Pizzas</Link>
       </h1>
     </header>
   );

@@ -75,8 +75,7 @@ function RestaurantPizzaForm() {
         ))}
       </select>
       <label htmlFor="price">Price:</label>
-      <input
-        
+      <input type="number"
         id="price"
         name="price"
         value={price}

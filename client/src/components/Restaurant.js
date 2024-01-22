@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 
+
 function Restaurant() {
   const [{ data: restaurant, error, status }, setRestaurant] = useState({
     data: null,
@@ -9,6 +10,7 @@ function Restaurant() {
   });
   const { id } = useParams();
 
+ 
   useEffect(() => {
     fetch(`/restaurants/${id}`).then((r) => {
       if (r.ok) {
@@ -41,8 +43,6 @@ function Restaurant() {
       </ul>
 
       <Link to="/restaurant_pizzas/new">Add Restaurant Pizza</Link>
-      <br/>
-      <Link to="/restaurants/delete">Delete Restaurant</Link>
     </section>
   );
 }
